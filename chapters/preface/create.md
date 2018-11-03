@@ -14,7 +14,8 @@ $ brew install graphviz
 $ brew install pandoc # needs version >2.2.3 of pandoc see travis for
                       # proper install if brew does not work
 $ brew install pandoc-citeproc
-$ npm install --global mermaid-filte                      
+$ npm install --global mermaid-filter
+$ npm install --global pandoc-index
 ```
 
 ## Ubuntu requirements
@@ -34,6 +35,7 @@ $ cd pandoc-citeproc
 $ stack setup
 $ stack install
 $ npm install --global mermaid-filter
+$ npm install --global pandoc-index
 ```
 
 ## Creating a book
@@ -43,6 +45,7 @@ Books are organize in directories. We currently have
 
     ./book/cloud/
     ./book/big-data-applications/
+    ./book/pi
 
 
 To compile a book go to the directory and make it. Lets assume you
@@ -51,8 +54,7 @@ like to create the cloud book for 516
 ```bash
 $ git clone https://github.com/cloudmesh-community/book.git
 $ cd cloud
-$ make images
-$ make
+$ make new
 ```
 
 To view it you say
@@ -60,6 +62,19 @@ To view it you say
 ```bash
 $ make view
 ```
+
+After you have done modifications, you need to do one of two things. In case you add new images you need to use 
+
+```
+$ make new
+```
+
+otherwise you can just use 
+
+```
+$ make 
+```
+
 
 ## Publishing the book to github
 

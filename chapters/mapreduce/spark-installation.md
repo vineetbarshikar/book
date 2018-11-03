@@ -1,7 +1,6 @@
-# Installation of Spark :o:
+# Installation of Spark
 
-In this section we will discuss how to install Spark 2.3.0 in Ubuntu
-16.04.
+In this section we will discuss how to install Spark 2.3.2 in Ubuntu 18.04.
 
 Prerequisites
 ------------
@@ -37,27 +36,24 @@ Source the bashrc file after adding the environmental variables.
 Install Spark with Hadoop
 -------------------------
 
-:o: TODO fix the link
-
 Here we use Spark packaged with Hadoop. In this package Spark uses
 Hadoop 2.7.0 in the packaged version. Note that in
-Section [Hadoop Instalation](#s:hadoop-local-installation){reference-type="ref"
-reference="s:hadoop-local-installation"} we use for the vanilla Hadoop
-installation Hadoop 3.0.0.
+Section [Hadoop Installation](#s:s-hadoop-installation) we use for the vanilla Hadoop
+installation Hadoop 3.0.1.
 
 Create the base directories and go to the directory.
 
     mkdir -p ~/cloudmesh/bin
     cd ~/cloudmesh/bin
 
-Then download Spark 2.3.0 as follows.
+Then download Spark 2.3.2 as follows.
 
-    wget https://www.apache.org/dyn/closer.lua/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz
+    wget https://archive.apache.org/dist/spark/spark-2.3.2/spark-2.3.2-bin-hadoop2.7.tgz
 
 Now extract the file,
 
-    tar xzf spark-2.3.0-bin-hadoop2.7.tgz
-    mv spark-2.3.0-bin-hadoop2.7 spark-2.3.0
+    tar xzf spark-2.3.2-bin-hadoop2.7.tgz
+    mv spark-2.3.2-bin-hadoop2.7 spark-2.3.2
 
 Spark Environment Variables
 ---------------------------
@@ -68,7 +64,7 @@ Open up bashrc file and add environmental variables as follows.
 
 Go to the last line and add the following content.
 
-    export SPARK_HOME=~/cloudmesh/bin/spark-2.3.0
+    export SPARK_HOME=~/cloudmesh/bin/spark-2.3.2
     export PATH=$SPARK_HOME/bin:$PATH
 
 Source the bashrc file.
@@ -85,6 +81,7 @@ Open up a new terminal and then run the following command.
 If it has been configured properly, it will display the following
 content.
 
+```
     Spark context Web UI available at http://192.168.1.66:4041
     Spark context available as 'sc' (master = local[*], app id = local-1521674331361).
     Spark session available as 'spark'.
@@ -92,12 +89,13 @@ content.
           ____              __
          / __/__  ___ _____/ /__
         _\ \/ _ \/ _ `/ __/  '_/
-       /___/ .__/\_,_/_/ /_/\_\   version 2.3.0
+       /___/ .__/\_,_/_/ /_/\_\   version 2.3.2
           /_/
 
     Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_151)
     Type in expressions to have them evaluated.
     Type :help for more information.
+```
 
 Please check the console LOGS and find the port number on which the
 Spark Web UI is hosted. It will show something like:
@@ -124,13 +122,13 @@ First we need to download the Spark packaged without Hadoop.
       mkdir -p ~/cloudmesh/bin
       cd ~/cloudmesh/bin
 
-Then download Spark 2.3.0 as follows.
+Then download Spark 2.3.2 as follows.
 
-    wget http://mirrors.ibiblio.org/apache/spark/spark-2.3.0/spark-2.3.0-bin-without-hadoop.tgz
+    wget https://archive.apache.org/dist/spark/spark-2.3.2/spark-2.3.2-bin-without-hadoop.tgz
 
 Now extract the file,
 
-      tar xzf spark-2.3.0-bin-without-hadoop.tgz  
+      tar xzf spark-2.3.2-bin-without-hadoop.tgz  
 
 Then add the environmental variables,
 
@@ -143,7 +141,7 @@ SPARK HOME variable with the new path.
 
 Go to the last line and add the following content.
 
-    export SPARK_HOME=~/cloudmesh/bin/spark-2.3.0-bin-without-hadoop
+    export SPARK_HOME=~/cloudmesh/bin/spark-2.3.2-bin-without-hadoop
     export PATH=$SPARK_HOME/bin:$PATH
 
 Source the bashrc file.
@@ -179,6 +177,7 @@ Open up a new terminal and then run the following command.
 If it has been configured properly, it will display the following
 content.
 
+```
     To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
     Spark context Web UI available at http://149-160-230-133.dhcp-bl.indiana.edu:4040
     Spark context available as 'sc' (master = local[*], app id = local-1521732740077).
@@ -187,12 +186,13 @@ content.
           ____              __
          / __/__  ___ _____/ /__
         _\ \/ _ \/ _ `/ __/  '_/
-       /___/ .__/\_,_/_/ /_/\_\   version 2.3.0
+       /___/ .__/\_,_/_/ /_/\_\   version 2.3.2
           /_/
 
     Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_151)
     Type in expressions to have them evaluated.
     Type :help for more information.
+```
 
 Then take a look the following address in the browser.
 
@@ -200,4 +200,4 @@ Then take a look the following address in the browser.
 
 Please check the console LOGS and find the port number on which the
 Spark Web UI is hosted. It will show something like: Spark context Web
-UI available at: \<some url\>
+UI available at the `logs` folder

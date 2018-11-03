@@ -159,11 +159,9 @@ will need to go to
 
 * [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/)
 
-You will see an image such as
+You will see an image such as below: +@fig:registration.
 
-![](images/reg.png)
-
-**Figure:** Registration
+![Registration](images/reg.png){#fig:registration}
 
 On that image you click the `Start free` button to obtain a free one
 year account. You will have to either create a new Microsoft account
@@ -201,11 +199,10 @@ Microsoft provides you with some elementary information:
 Choose `Create a resource` in the upper left-hand corner of the Azure
 portal. Select a VM name, and the disk type as SSD, then provide a
 username. The password must be at least 12 characters long and meet
-the defined complexity requirements.
+the defined complexity requirements. As the following: +@fig:creating-a-vm.
 
-![](images/create-windows-vm-portal-basic-blade.png)
+![Creating a VM](images/create-windows-vm-portal-basic-blade.png){#fig:creating-a-vm}
 
-**Figure:** Creating a VM
 
 Source: <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/media/quick-create-portal/create-windows-vm-portal-basic-blade.png>
 
@@ -216,14 +213,13 @@ do cost and reduce your free hours on Azure. Hence you need to make
 sure you carefully review the charging rates and chose VM sizes and
 types that minimize your charges.
 
-A VM can be started through the Portal as follows:
+A VM can be started through the Portal as follows: +@fig:start-button.
 
 * On the overview tqb, a VM can be started by clicking the `Start`
   button.
 
-![](images/start-button.png)
+![Start button](images/start-button.png){#fig:start-button}
 
-**Figure:** Start button
 
 ## Stopping the VM
 
@@ -231,13 +227,12 @@ It is the most important to stop your VMS once they are not in used,
 or you get continuously charged. The portal allows you to see the list
 of VM that you run as follows
 
-To shut a VM down, please do the following:
+To shut a VM down, please do the following: see +@fig:stop-button.
 
 * On the overview tab, a VM can be started by clicking the `Stop` button.
 
-![](images/stop-button.png)
+![Stop button](images/stop-button.png){#fig:stop-button}
 
-**Figure:** Stop button
 
 ## Exercises
 

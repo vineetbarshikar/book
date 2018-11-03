@@ -19,6 +19,7 @@
         - chapters/authors.md
         - chapters/preface/create.md
         - chapters/preface/issues.md
+        - chapters/preface/reader.md                
         - chapters/preface/notation.md
 
 - DEVTOOLS:
@@ -60,10 +61,11 @@
                 - chapters/data/formats.md
                 - chapters/data/mongoengine.md
         - chapters/prg/python/python-wordcount.md
-        - chapters/prg/python/dask/dask.md
         - chapters/prg/python/numpy/numpy.md
         - chapters/prg/python/scipy/scipy.md
         - chapters/prg/python/scikit-learn/scikit-learn-k-means.md
+        - chapters/prg/python/python-parallel.md
+        - chapters/prg/python/dask/dask.md
         - chapters/prg/python/random-forest/random-forest.md
         - chapters/prg/python/fingerprint/fingerprint.md
         - chapters/prg/python/facedetection/facedetection.md
@@ -118,7 +120,7 @@
             - chapters/container/docker-swarm.md
             - chapters/container/docker-fs.md
             - chapters/container/docker-hadoop.md
-            - chapters/container/docker-pagerank-example-instruction.md            
+            - chapters/container/docker-pagerank-example-instruction.md
             - chapters/container/docker-spark.md
         - chapters/SECTION/SECTION-KUBERNETES.md:
             - chapters/container/kubernetes-intro.md
@@ -132,13 +134,13 @@
         - chapters/mapreduce/mapreduce.md
         - chapters/mapreduce/hadoop-lectures.md:
             - chapters/mapreduce/hadoop-installation.md
+            - chapters/mapreduce/cm-hadoop.md
         - chapters/SECTION/SECTION-SPARK.md:
             - chapters/mapreduce/spark-lectures.md
             - chapters/mapreduce/spark-installation.md
             - chapters/mapreduce/spark-streaming.md
             - chapters/mapreduce/spark-udf.md
         - chapters/SECTION/SECTION-HADOOP-ADVANCED.md:
-            - chapters/mapreduce/cm-hadoop.md
             - chapters/mapreduce/amazon-emr-1.md
             - chapters/mapreduce/amazon-emr-2.md
             - chapters/mapreduce/twister.md
@@ -170,12 +172,12 @@
 - SERVERLESS:
     - chapters/SECTION/SECTION-SERVERLESS.md:
         - chapters/faas/introduction.md
-        - chapters/iaas/aws/aws-lambda.md
+        - chapters/faas/aws-lambda.md
+        - chapters/faas/openwhisk.md
+        - chapters/faas/kubeless.md
         - chapters/faas/microsoft-azure-functions.md
         - chapters/faas/google-cloud-functions.md
-        - chapters/faas/openwhisk.md
         - chapters/faas/openfaas.md
-        - chapters/faas/kubeless.md
         - chapters/faas/riff.md
         - chapters/faas/fission.md
         - chapters/faas/ironfunction.md
@@ -198,10 +200,10 @@
 - IOT:
     - chapters/SECTION/SECTION-IOT.md:
         - chapters/iot/introduction.md
-        - chapters/iot/tools.md        
+        - chapters/iot/tools.md
         - chapters/iot/hardware.md
-        - chapters/iot/sensors.md        
-        - chapters/iot/grovepi.md        
+        - chapters/iot/sensors.md
+        - chapters/iot/grovepi.md
         - chapters/iot/dexter.md
         - chapters/iot/easyplug.md
         - chapters/iot/esp8266.md
@@ -225,7 +227,7 @@
     - $ref:PREFACE
     - chapters/pi/preface.md
     - chapters/pi/board.md
-    - $ref:IOT    
+    - $ref:IOT
     - chapters/pi/case.md:
         - chapters/case/case.md
         - chapters/pi/links.md
@@ -278,7 +280,7 @@
 - BOOK_DRAFT:
     - $ref:DRAFTS
     - chapters/pi/setup-ultimate.md
-    - chapters/pi/setup-dev.md    
+    - chapters/pi/setup-dev.md
     - chapters/pi/run-at-boot.md
     - chapters/pi/setup.md
     - chapters/pi/case.md
@@ -313,7 +315,7 @@
 - BOOK_516:
     - chapters/SECTION/SECTION-QUICK516.md:
         - chapters/quick516.md
-        - chapters/assignment.md        
+        - chapters/assignment.md
         - chapters/class/e516-syllabus-table.md
     - $ref:PREFACE
     - chapters/SECTION/SECTION-OVERVIEW.md:
@@ -355,8 +357,11 @@
     - chapters/iaas/futuresystems/futuresystems.md
     - $ref:CHAMELEON
     - chapters/container/glossary.md
-    - $ref:IN    
+    - $ref:IN
+    - chapters/SECTION/SECTION-INDEX.md:
+        - chapters/index.md
     - chapters/SECTION/SECTION-REFERENCES.md
+
 
 - BOOK_BIGDATA:
     - $ref:PREFACE:
@@ -366,21 +371,22 @@
         - chapters/class/e534-i523.md
         - chapters/class/volumes.md
         - chapters/in/datasets.md
-        - chapters/class/assignments-523.md        
-        - chapters/bigdata/intro-fall-2018.md
+        - chapters/class/assignments-523.md
+    - chapters/bigdata/intro-fall-2018.md
     - chapters/bigdata/applications/overview.md
     - chapters/bigdata/applications/physics.md
-    - chapters/bigdata/applications/radar.md
     - chapters/bigdata/applications/lifestyle.md
     - chapters/bigdata/applications/sport.md
     - chapters/bigdata/applications/cloud.md
     - chapters/bigdata/applications/usecases.md
     - chapters/bigdata/applications/sensor.md
+    - chapters/bigdata/applications/radar.md
     - chapters/bigdata/applications/web.md
     - chapters/bigdata/applications/health.md
-    - chapters/bigdata/algorithms/technology.md
-    - chapters/bigdata/algorithms/clustering.md
-    - chapters/bigdata/algorithms/plotviz.md
+    - chapters/SECTION/SECTION-TECH.md:
+        - chapters/bigdata/applications/statistics.md    
+        - chapters/bigdata/applications/kmeans.md    
+        - chapters/bigdata/applications/plotviz.md
     - $ref:DEVTOOLS
     - $ref:PYTHON
     - chapters/SECTION/SECTION-FAQ.md:
